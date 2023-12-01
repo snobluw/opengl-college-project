@@ -4,7 +4,7 @@
 #include <cmath>
 
 //memilih scene yang akan di render
-MonoBehaviour *monobehavior = new OtherScene();
+MonoBehaviour *monobehavior = new RifqiScene();
 
 float zoomFactor = 1.0f;
 float targetZoom = 1.0f;
