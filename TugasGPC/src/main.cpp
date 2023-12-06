@@ -1,10 +1,12 @@
 #include <GL/freeglut.h>
 #include "scenes/rifqiScenes.h"
 #include "scenes/scene1.h"
+#include "scenes/scene2.h"
 #include <cmath>
 
 //memilih scene yang akan di render
 MonoBehaviour *monobehavior = new Scene1();
+MonoBehaviour* monobehavior2 = new Scene2();
 
 float zoomFactor = 1.0f;
 float targetZoom = 1.0f;
@@ -68,6 +70,7 @@ void init()
 int main(int argc, char** argv) 
 {
     monobehavior->start();
+    monobehavior2->start();
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGBA| GLUT_DEPTH);
@@ -140,6 +143,7 @@ void frameUpdater(int)
     glutTimerFunc(1000 / 60, frameUpdater, 0);
 
     monobehavior->update();
+    monobehavior2->update();
 
 }
 
@@ -147,6 +151,11 @@ void drawScene()
 {
     //render objek untuk setiap objek yang ada pada scene
     for (Object* object : monobehavior->objects) {
+
+        object->renderObject();
+    }
+
+    for (Object* object : monobehavior2->objects) {
 
         object->renderObject();
     }

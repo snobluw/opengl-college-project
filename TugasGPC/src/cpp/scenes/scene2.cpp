@@ -15,7 +15,7 @@ void Scene2::start() {
 		grass.at(i)->scaleZ = 1;
 	}
 
-	addObject(dirt.at(0), -4.00, -1.00, 1.00);
+	addObject(dirt.at(0), -2.00, -1.00, 1.00);
 	addObject(dirt.at(1), -3.00, -1.00, 2.00);
 	addObject(dirt.at(2), -2.00, -1.00, 3.00);
 }
