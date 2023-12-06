@@ -19,6 +19,7 @@ void Scene1::start() {
 	addObject(dirt.at(0), -4.00, -1.00, 1.00);
 	addObject(dirt.at(1), -3.00, -1.00, 2.00);
 	addObject(dirt.at(2), -2.00, -1.00, 3.00);
+	addObject(dirt.at(2), -2.00, -1.00, 5.00);
 }
 
 void Scene1::update() {}
