@@ -4,13 +4,13 @@
 
 using namespace std;
 
-class OtherScene : public MonoBehaviour
+class Scene2 : public MonoBehaviour
 {
 public:
 
-    vector<Object*> mud;
+    vector<Object*> dirt;
     vector<Object*> grass;
-    
+
     void start();
     void update();
 };

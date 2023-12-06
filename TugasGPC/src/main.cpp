@@ -1,10 +1,10 @@
 #include <GL/freeglut.h>
 #include "scenes/rifqiScenes.h"
-#include "scenes/otherScenes.h"
+#include "scenes/scene1.h"
 #include <cmath>
 
 //memilih scene yang akan di render
-MonoBehaviour *monobehavior = new RifqiScene();
+MonoBehaviour *monobehavior = new Scene1();
 
 float zoomFactor = 1.0f;
 float targetZoom = 1.0f;
@@ -50,7 +50,7 @@ void init()
     glEnable(GL_COLOR_MATERIAL);
     glEnable(GL_NORMALIZE);
 
-    glClearColor(0.6f, 0.6f, 0.6f, 0.0f);
+    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
 
     GLfloat lightDirection[] = { -1.0f, 0.6f, 0.8f, 0.0f };  // Directional light from the positive diagonal
     glLightfv(GL_LIGHT0, GL_POSITION, lightDirection);

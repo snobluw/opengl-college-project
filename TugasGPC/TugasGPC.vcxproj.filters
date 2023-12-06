@@ -30,7 +30,7 @@
     <ClCompile Include="src\cpp\scenes\rifqiScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\cpp\scenes\otherScene.cpp">
+    <ClCompile Include="src\cpp\scenes\scene1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\object.cpp">
@@ -43,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\mesh\cube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpp\scenes\scene2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,7 +65,10 @@
     <ClInclude Include="src\header\scenes\rifqiScenes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\header\scenes\otherScenes.h">
+    <ClInclude Include="src\header\scenes\scene1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header\scenes\scene2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
