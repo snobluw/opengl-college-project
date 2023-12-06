@@ -12,12 +12,9 @@ void Cube::shape(float x, float y, float z, float scalex, float scaley, float sc
 
     glRotatef(MeshRenderer::object->rotateX, 1.0f, 0.0f, 0.0f);
     glRotatef(MeshRenderer::object->rotateY, 0.0f, 1.0f, 0.0f);
+    glRotatef(MeshRenderer::object->rotateZ, 0.0f, 0.0f, 1.0f);
 
     glScalef(scalex, scaley, scalez);
-
-    glRotatef(0.0, 0.0f, 0.0f, 0.0f);
-    glRotatef(0.0, 0.0f, 0.0f, 0.0f);
-    glRotatef(0.0f, 0.0f, 0.0f, 0.0f);
 
     glBegin(GL_QUADS);
 

@@ -40,7 +40,7 @@ void Scene2::start() {
 		grass.at(i)->scaleZ = 5;
 
 		// cloud
-		cloud.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		cloud.at(i)->color.assign({ 0.463, 0.039, 0.973 });
 		cloud.at(i)->scaleX = 3;
 		cloud.at(i)->scaleY = 1;
 		cloud.at(i)->scaleZ = -3;
@@ -94,7 +94,7 @@ void Scene2::start() {
 		house_glass.at(i)->scaleZ = 1;
 
 		// house_roof_half
-		house_roof_half.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		house_roof_half.at(i)->color.assign({ 0.863, 0.639, 0.373 });
 		house_roof_half.at(i)->scaleX = 1;
 		house_roof_half.at(i)->scaleY = 0.5;
 		house_roof_half.at(i)->scaleZ = 0.5;
@@ -112,7 +112,7 @@ void Scene2::start() {
 		house_wood_2.at(i)->scaleZ = 1;
 		
 		// house_fence
-		house_fence.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		house_fence.at(i)->color.assign({ 0.678, 0.447, 0.263 });
 		house_fence.at(i)->scaleX = 0.1;
 		house_fence.at(i)->scaleY = 1;
 		house_fence.at(i)->scaleZ = 0.1;
@@ -257,8 +257,11 @@ void Scene2::start() {
 	
 	// house_fence
 	addObject(house_fence.at(0), 1.49, 1.36, 3.00); // rotate
+	house_fence.at(0)->rotateZ += 90;
 	addObject(house_fence.at(1), 1.49, 1.00, 1.00); // rotate
+	house_fence.at(1)->rotateZ += 90;
 	addObject(house_fence.at(2), 2.49, 1.00, 1.00); // rotate
+	house_fence.at(2)->rotateZ += 90;
 	addObject(house_fence.at(3), 1.00, 1.00, 3.00);
 	addObject(house_fence.at(4), 0.00, 1.00, 1.00);
 
