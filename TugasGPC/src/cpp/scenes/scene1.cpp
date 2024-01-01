@@ -3,7 +3,7 @@
 
 void Scene1::start() {
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 50; i++) {
 
 		House_Fence.push_back(new Object);
 		House_Roof_Half.push_back(new Object);
@@ -16,8 +16,10 @@ void Scene1::start() {
 		door = new Object();
 		road = new Object();
 
+		road->color.assign({ 1, 0.871, 0.573 });
+
 		
-		House_Fence.at(i)->color.assign({ 0.678, 0.447, 0.263 });
+		House_Fence.at(i)->color.assign({ 0.851, 0.6, 0.369 });
 		House_Fence.at(i)->scaleX = 0.10;
 		House_Fence.at(i)->scaleY = 1.00;
 		House_Fence.at(i)->scaleZ = 0.10;

@@ -5,8 +5,8 @@
 #include <cmath>
 
 //memilih scene yang akan di render
-MonoBehaviour *monobehavior = new Scene1();
-MonoBehaviour* monobehavior2 = new Scene2();
+MonoBehaviour *scene1 = new Scene1();
+MonoBehaviour* scene2 = new Scene2();
 
 float zoomFactor = 1.0f;
 float targetZoom = 1.0f;
@@ -28,6 +28,8 @@ bool isWPressed = false;
 bool isAPressed = false;
 bool isSPressed = false;
 bool isDPressed = false;
+
+float rotateX = 0;
 
 
 void display();
@@ -54,7 +56,7 @@ void init()
 
     glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
 
-    GLfloat lightDirection[] = { -1.0f, 0.6f, 0.8f, 0.0f };  // Directional light from the positive diagonal
+    GLfloat lightDirection[] = { 0.8f, 1.0f, 0.8f, 0.0f };  // Directional light from the positive diagonal
     glLightfv(GL_LIGHT0, GL_POSITION, lightDirection);
 
     GLfloat ambientIntensity[] = { 0.2f, 0.2f, 0.2f, 1.0f };
@@ -69,8 +71,8 @@ void init()
 
 int main(int argc, char** argv) 
 {
-    monobehavior->start();
-    monobehavior2->start();
+    scene1->start();
+    scene2->start();
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGBA| GLUT_DEPTH);
@@ -131,7 +133,7 @@ void reshape(int width, int height)
     float aspect_ratio = (float)width / height;
 
     gluPerspective(50.0, aspect_ratio, 0.1, 100.0);
-    gluLookAt(3.0, 3.0, 8.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+    gluLookAt(5.0, 5.0, 8.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -142,23 +144,32 @@ void frameUpdater(int)
     glutPostRedisplay();
     glutTimerFunc(1000 / 60, frameUpdater, 0);
 
-    monobehavior->update();
-    monobehavior2->update();
+    rotateX += 0.1;
+
+    scene1->update();
+    scene2->update();
 
 }
 
+
 void drawScene() 
 {
+    glPushMatrix();
+
+    glRotatef(rotateX, 0.0f, 1.0f, 0.0f);
+
     //render objek untuk setiap objek yang ada pada scene
-    for (Object* object : monobehavior->objects) {
+    for (Object* object : scene1->objects) {
 
         object->renderObject();
     }
 
-    for (Object* object : monobehavior2->objects) {
+    for (Object* object : scene2->objects) {
 
         object->renderObject();
     }
+
+    glPopMatrix();
 }
 
 void mouseWheelCallback(int wheel, int direction, int x, int y)

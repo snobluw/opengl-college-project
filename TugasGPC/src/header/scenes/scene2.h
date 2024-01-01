@@ -24,7 +24,6 @@ public:
     vector<Object*> house_wood_1;
     vector<Object*> house_wood_2;
     vector<Object*> house_fence;
-    vector<Object*> sun;
 
     void start();
     void update();

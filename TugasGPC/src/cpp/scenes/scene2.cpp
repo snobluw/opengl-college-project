@@ -2,7 +2,7 @@
 
 void Scene2::start() {
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 50; i++) {
 		sand.push_back(new Object);
 		water.push_back(new Object);
 		grass.push_back(new Object);
@@ -19,7 +19,6 @@ void Scene2::start() {
 		house_wood_1.push_back(new Object);
 		house_wood_2.push_back(new Object);
 		house_fence.push_back(new Object);
-		sun.push_back(new Object);
 
 		// sand
 		sand.at(i)->color.assign({ 0.678, 0.447, 0.263 });
@@ -40,7 +39,7 @@ void Scene2::start() {
 		grass.at(i)->scaleZ = 5;
 
 		// cloud
-		cloud.at(i)->color.assign({ 0.463, 0.039, 0.973 });
+		cloud.at(i)->color.assign({ 1,1,1 });
 		cloud.at(i)->scaleX = 3;
 		cloud.at(i)->scaleY = 1;
 		cloud.at(i)->scaleZ = -3;
@@ -52,7 +51,7 @@ void Scene2::start() {
 		tree_leaf.at(i)->scaleZ = 1;
 
 		// tree_wood
-		tree_wood.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		tree_wood.at(i)->color.assign({ 0.49, 0.337, 0.169 });
 		tree_wood.at(i)->scaleX = 1;
 		tree_wood.at(i)->scaleY = 1;
 		tree_wood.at(i)->scaleZ = 1;
@@ -112,16 +111,11 @@ void Scene2::start() {
 		house_wood_2.at(i)->scaleZ = 1;
 		
 		// house_fence
-		house_fence.at(i)->color.assign({ 0.678, 0.447, 0.263 });
+		house_fence.at(i)->color.assign({ 0.851, 0.6, 0.369 });
 		house_fence.at(i)->scaleX = 0.1;
 		house_fence.at(i)->scaleY = 1;
 		house_fence.at(i)->scaleZ = 0.1;
-		
-		// sun
-		sun.at(i)->color.assign({ 0.463, 0.839, 0.373 });
-		sun.at(i)->scaleX = 1;
-		sun.at(i)->scaleY = 1;
-		sun.at(i)->scaleZ = 1;
+	
 	}
 
 	// sand
@@ -172,9 +166,11 @@ void Scene2::start() {
 
 	// wind_road
 	addObject(wind_road.at(0), -0.31, 0.51, -4.00); // rotate
+	wind_road.at(0)->rotateY += 270;
 
 	// wind_wing
 	addObject(wind_wing.at(0), -0.61, 8.00, -4.00); // rotate
+	wind_wing.at(0)->rotateX += 270;
 	addObject(wind_wing.at(1), -0.61, 8.00, -4.00);
 
 	// wind_door
@@ -240,8 +236,11 @@ void Scene2::start() {
 	addObject(house_roof_half.at(3), -5.00, 4.75, 1.00, 1.00, 0.50, 1.00);
 	addObject(house_roof_half.at(4), 0.00, 4.75, 1.00, 1.00, 0.50, 1.00);
 	addObject(house_roof_half.at(5), -4.00, 3.75, 4.00, 1.00, 0.50, 1.00); // rotate
+	house_roof_half.at(5)->rotateY += 180;
 	addObject(house_roof_half.at(6), 0.00, 3.75, 4.00, 1.00, 0.50, 1.00); // rotate
+	house_roof_half.at(6)->rotateY += 180;
 	addObject(house_roof_half.at(7), -2.00, 5.24, 2.75); // rotate
+	house_roof_half.at(7)->rotateY += 180;
 	addObject(house_roof_half.at(8), -1.00, 5.24, 1.25);
 
 	// house_wood_1
@@ -265,8 +264,9 @@ void Scene2::start() {
 	addObject(house_fence.at(3), 1.00, 1.00, 3.00);
 	addObject(house_fence.at(4), 0.00, 1.00, 1.00);
 
-	// sun
-	addObject(sun.at(0), 0.00, 3.00, 0.00); // rotate
 }
 
-void Scene2::update() {}
+void Scene2::update() {
+	wind_wing.at(0)->rotateX += 0.6;
+	wind_wing.at(1)->rotateX += 0.6;
+}
