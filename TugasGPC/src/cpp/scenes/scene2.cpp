@@ -57,37 +57,37 @@ void Scene2::start() {
 		tree_wood.at(i)->scaleZ = 1;
 
 		// wind_road
-		wind_road.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		wind_road.at(i)->color.assign({ 0.91, 0.827, 0.612 });
 		wind_road.at(i)->scaleX = 1;
 		wind_road.at(i)->scaleY = 0.1;
 		wind_road.at(i)->scaleZ = 2;
 
 		// wind_wing
-		wind_wing.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		wind_wing.at(i)->color.assign({ 0.863, 0.639, 0.373 });
 		wind_wing.at(i)->scaleX = 0.1;
 		wind_wing.at(i)->scaleY = 6;
 		wind_wing.at(i)->scaleZ = 1;
 
 		// wind_door
-		wind_door.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		wind_door.at(i)->color.assign({ 0.98, 0.851, 0.451 });
 		wind_door.at(i)->scaleX = 0.4;
 		wind_door.at(i)->scaleY = 2;
 		wind_door.at(i)->scaleZ = 1;
 
 		// wind_wood_1
-		wind_wood_1.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		wind_wood_1.at(i)->color.assign({ 0.49, 0.337, 0.169 });
 		wind_wood_1.at(i)->scaleX = 1;
 		wind_wood_1.at(i)->scaleY = 1;
 		wind_wood_1.at(i)->scaleZ = 1;
 
 		// wind_wood_2
-		wind_wood_2.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		wind_wood_2.at(i)->color.assign({ 0.98, 0.851, 0.451 });
 		wind_wood_2.at(i)->scaleX = 1;
 		wind_wood_2.at(i)->scaleY = 1;
 		wind_wood_2.at(i)->scaleZ = 1;
 
 		// house_glass
-		house_glass.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		house_glass.at(i)->color.assign({ 0.247, 0.678, 1 });
 		house_glass.at(i)->scaleX = 1;
 		house_glass.at(i)->scaleY = 1;
 		house_glass.at(i)->scaleZ = 1;
@@ -99,13 +99,13 @@ void Scene2::start() {
 		house_roof_half.at(i)->scaleZ = 0.5;
 
 		// house_wood_1
-		house_wood_1.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		house_wood_1.at(i)->color.assign({ 0.91, 0.696, 0.496 });
 		house_wood_1.at(i)->scaleX = 1;
 		house_wood_1.at(i)->scaleY = 1;
 		house_wood_1.at(i)->scaleZ = 1;
 
 		// house_wood_2
-		house_wood_2.at(i)->color.assign({ 0.463, 0.839, 0.373 });
+		house_wood_2.at(i)->color.assign({ 0.91, 0.796, 0.596 });
 		house_wood_2.at(i)->scaleX = 1;
 		house_wood_2.at(i)->scaleY = 1;
 		house_wood_2.at(i)->scaleZ = 1;

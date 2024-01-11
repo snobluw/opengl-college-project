@@ -34,27 +34,27 @@ void Scene1::start() {
 		House_Roof_Half.at(i)->scaleY = 0.50;
 		House_Roof_Half.at(i)->scaleZ = 0.50;
 
-		House_Step_Half.at(i)->color.assign({ 0.863, 0.839, 0.373 });
+		House_Step_Half.at(i)->color.assign({ 0.812, 0.796, 0.773 });
 		House_Step_Half.at(i)->scaleX = 1;
 		House_Step_Half.at(i)->scaleY = 0.50;
 		House_Step_Half.at(i)->scaleZ = 1;
 
-		House_Roof_1.at(i)->color.assign({ 0.463, 0.839, 0.973 });
+		House_Roof_1.at(i)->color.assign({ 0.863, 0.639, 0.373 });
 		House_Roof_1.at(i)->scaleX = 1;
 		House_Roof_1.at(i)->scaleY = 1;
 		House_Roof_1.at(i)->scaleZ = 1;
 
-		House_Wood_1.at(i)->color.assign({ 0.963, 0.039, 0.373 });
+		House_Wood_1.at(i)->color.assign({ 0.91, 0.696, 0.496 });
 		House_Wood_1.at(i)->scaleX = 1;
 		House_Wood_1.at(i)->scaleY = 1;
 		House_Wood_1.at(i)->scaleZ = 1;
 
-		House_Wood_2.at(i)->color.assign({ 0.563, 0.039, 0.373 });
+		House_Wood_2.at(i)->color.assign({ 0.91, 0.796, 0.596 });
 		House_Wood_2.at(i)->scaleX = 1;
 		House_Wood_2.at(i)->scaleY = 1;
 		House_Wood_2.at(i)->scaleZ = 1;
 
-		House_Glass.at(i)->color.assign({ 0.003, 0.039, 0.973 });
+		House_Glass.at(i)->color.assign({ 0.247, 0.678, 1 });
 		House_Glass.at(i)->scaleX = 1;
 		House_Glass.at(i)->scaleY = 1;
 		House_Glass.at(i)->scaleZ = 1;
@@ -237,6 +237,7 @@ void Scene1::start() {
 	House_Step_Half.at(15)->rotateY += 180.00;
 
 	addObject(door, -1.00, 1.50, 2.00, 0.04, 2.00, 1.00);
+	door->color.assign({ 0.49, 0.38, 0.212 });
 
 	addObject(road, 1.69, 0.51, 2.00, 1.00, 0.10, 6.00);
 	road->rotateY += 270;
